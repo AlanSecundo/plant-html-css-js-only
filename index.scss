@@ -1,0 +1,527 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Montserrat;
+  font-style: normal;
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+header {
+  background-color: #75bc97;
+  width: 100%;
+  @extend .flex-row-center;
+  position: relative;
+}
+
+#search {
+  width: 100%;
+  @extend .flex-row-center;
+}
+
+#results {
+  width: 100%;
+  background-color: #f2f2f2;
+  @extend .flex-row-center;
+}
+
+.container {
+  width: 859px;
+}
+
+.header__container {
+  @extend .container;
+  display: flex;
+  justify-content: space-between;
+  padding: 36px 0px;
+  position: relative;
+  z-index: 2;
+}
+
+.search_container {
+  @extend .container;
+  display: flex;
+  justify-content: space-between;
+  padding: 47px 0px 53px 0px;
+}
+
+.results__container {
+  @extend .container;
+  display: flex;
+  padding: 53px 0px 67px 0px;
+}
+
+#section__search {
+  @extend .flex-row-center;
+  background-color: white;
+}
+
+#section__results {
+  @extend .flex-row-center;
+  background-color: #f2f2f2;
+}
+
+.header_leaves {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.header__leaves--first {
+  background-image: url('./images/hero/desktop/left-leaves.png');
+  height: 100%;
+  background-size: 100% 100%;
+  width: 70%;
+  z-index: 1;
+  left: 0;
+  margin-right: -2vw;
+}
+
+.header__leaves--second {
+  background-image: url('./images/hero/desktop/right-leaves.png');
+  background-size: 100% 100%;
+  height: 100%;
+  min-width: 25%;
+  z-index: 3;
+  margin-left: -2vw;
+}
+
+.header__leaves--plantperson {
+  background-image: url('./images/hero/desktop/plantperson.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 428px;
+  width: 335px;
+}
+
+.search__filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 219px;
+  height: 100%;
+}
+
+.search__filter--text {
+  margin-top: 6px;
+  color: #848484;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.header__content {
+  max-width: 50%;
+}
+
+.header__content--logo {
+  margin-top: 21px;
+}
+
+.header__content--title {
+  color: #ffffff;
+  font-size: 70px;
+}
+
+.search__filter--sunicon {
+  width: 75px;
+  height: 75px;
+}
+
+.search__filter--wateringcanicon {
+  width: 103px;
+  height: 75px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.search__filter--dogicon {
+  width: 75px;
+  height: 62px;
+}
+
+.search__filter--selectinput {
+  margin-top: 24px;
+  height: 40px;
+  width: 219px;
+  border-radius: 19px;
+  border: 1px solid #a8a8a8;
+  padding: 5px 20px;
+  user-select: none;
+  outline: none;
+}
+
+.results__notfound {
+  color: #a9a9a9;
+}
+
+.results__notfound--title {
+  font-size: 45px;
+}
+
+.results__notfound--paragraph {
+  max-width: 230px;
+}
+
+.results--image {
+  margin-left: 220px;
+}
+
+.results__found {
+  display: flex;
+  flex-direction: column;
+}
+
+.results__found--title {
+  font-size: 55px;
+  color: #0c261c;
+}
+
+.results--button {
+  margin-top: 60px;
+  width: 100%;
+  text-decoration: none;
+  border: 1px solid #15573f;
+  color: #15573f;
+  border-radius: 25px;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.results__found--span {
+  margin-left: 17px;
+}
+
+#results__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 25px;
+  grid-row-gap: 20px;
+}
+
+.sem-destaque {
+  height: 245px;
+  width: 206px;
+  background-color: green;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  background-color: white;
+  animation: fade-in 1s ease;
+}
+
+.card__spotlight {
+  @extend .card;
+  padding: 31px 31px 21px 21px;
+  grid-column: span 2;
+  grid-row: span 2;
+  position: relative;
+}
+
+.card__spotlight--bar {
+  position: absolute;
+  margin-top: 20px;
+  left: 0;
+  padding-left: 21px;
+  padding-right: 26px;
+  background-color: #75bc97;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card__spotlight--image {
+  width: 299px;
+  height: 353px;
+}
+
+.card__spotlight--footer {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #1e6b4e;
+  font-weight: 700;
+}
+
+.card__spotlight--plantname {
+  width: 50%;
+  font-size: 35px;
+  margin-bottom: 0px;
+}
+
+.card__spotlight--attributes {
+  font-size: 24px;
+  text-align: right;
+  bottom: 0;
+}
+
+.card__normal {
+  @extend .card;
+  padding: 12px 20px;
+  justify-content: flex-end;
+}
+
+.card__normal--image {
+  max-width: 100%;
+}
+
+.card__normal--footer {
+  margin-top: 3px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #1e6b4e;
+  font-weight: 700;
+}
+
+.card__normal--plantname {
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+.card__normal--attributes {
+  margin-top: 5px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.hidden {
+  display: none;
+}
+
+select.search__filter--selectinput option:hover {
+  box-shadow: 0 0 10px 100px pink inset;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    width: 100vw;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .header__leaves--first {
+    background-image: url('./images/hero/mobile/mobile-leaves.png');
+    max-height: 70%;
+    width: 100%;
+    background-size: 100% 100%;
+    z-index: 1;
+    top: 0;
+    margin-right: 0;
+    position: absolute;
+  }
+
+  .header__leaves--plantperson {
+    background-image: url('./images/hero/mobile/mobile-plantperson.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 276px;
+    position: relative;
+    height: 40%;
+    margin: 20px;
+  }
+
+  .header_leaves {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+  }
+
+  .header__container {
+    min-height: 593px;
+    flex-direction: column;
+    padding: 40px 34px 34px 25px;
+  }
+
+  .header__container {
+    flex-direction: column;
+    // justify-content: space-between;
+    padding: 40px 34px 34px 25px;
+    // position: relative;
+    // z-index: 2;
+  }
+
+  .header__content {
+    max-width: 100%;
+  }
+
+  .header__content--title {
+    font-size: 40px;
+    max-width: 80%;
+  }
+
+  .header__leaves--second {
+    display: none;
+  }
+
+  .search__filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 18px 33px 38px 38px;
+  }
+
+  .search_container {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .results__found--title {
+    line-height: 49px;
+    font-size: 40px;
+    margin-left: 48px;
+    width: 60%;
+  }
+
+  .results__container {
+    padding: 32px 0px 22px 0px;
+    flex-direction: column;
+  }
+
+  .results__footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .results--button {
+    margin: 32px 19px 0px 19px;
+    width: 100%;
+  }
+
+  #results__list {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 100vw;
+    padding: 0px 27px;
+  }
+
+  .card {
+    width: 258px;
+  }
+
+  .card__normal {
+    @extend .card;
+    padding: 31px 31px 21px 21px;
+  }
+
+  .card__spotlight {
+    @extend .card;
+    padding: 31px 31px 21px 21px;
+    justify-content: flex-end;
+  }
+
+  .card__spotlight--bar {
+    top: 0;
+  }
+
+  .card__spotlight--image {
+    width: 180px;
+    height: 221px;
+    max-width: 187px;
+  }
+
+  .card__normal--image {
+    width: 180px;
+    height: 221px;
+    max-width: 187px;
+  }
+
+  .card__spotlight--footer {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+  }
+
+  .card__normal--footer {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card__spotlight--plantname {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+
+  .card__normal--plantname {
+    font-size: 16px;
+  }
+
+  .card__spotlight--attributes {
+    margin-top: 5px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card__normal--attributes {
+    font-size: 16px;
+  }
+
+  .results__notfound {
+    color: #a9a9a9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .results__notfound--title {
+    font-size: 45px;
+    width: 255px;
+  }
+
+  .results__notfound--paragraph {
+    max-width: 230px;
+  }
+
+  .results--image {
+    margin-left: 0px;
+    text-align: center;
+    margin-top: 37px;
+  }
+}

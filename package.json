@@ -1,0 +1,17 @@
+{
+  "name": "plant-html-css-js-only",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "parcel": "1.12.4"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.6.1",
+    "sass": "^1.35.1"
+  },
+  "keywords": []
+}

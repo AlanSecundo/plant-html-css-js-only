@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Front End Test - Greenthumb</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.scss" />
+  </head>
+
+  <body>
+    <header>
+      <div class="header_leaves">
+        <div class="header__leaves--first"></div>
+        <div class="header__leaves--plantperson"></div>
+        <div class="header__leaves--second"></div>
+      </div>
+      <div class="header__container">
+        <div class="header__content">
+          <img
+            class="header__content--logo"
+            src="images/icons/logo-white.svg"
+            alt="A greenthumb company logo with lowercase letters and all in white color."
+          />
+
+          <h1 class="header__content--title">Find your next green friend</h1>
+
+          <a href="#search">
+            <img
+              src="images/icons/arrow-down.svg"
+              alt="An arrow points to bottom"
+              class="header__leaves--icon"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <article>
+      <section id="search">
+        <div class="search_container">
+          <div class="search__filter">
+            <img
+              src="images/illustrations/sun.png"
+              alt="Icon of a sun with sunglasses and serious face"
+              class="search__filter--sunicon"
+            />
+
+            <span class="search__filter--text">
+              <b>1.</b> Set the amount of <b>sunlight</b> your plant will get.
+            </span>
+
+            <select
+              name="sunlight"
+              id="sunlight"
+              class="search__filter--selectinput"
+            >
+              <option value="" selected disabled hidden>Select...</option>
+              <option value="no">No</option>
+              <option value="low">Low</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+
+          <div class="search__filter">
+            <img
+              src="images/illustrations/wateringcan.png"
+              alt="Icon of an wateringcan with a happy face"
+              class="search__filter--wateringcanicon"
+            />
+
+            <span class="search__filter--text">
+              <b>2.</b> How often do you want to <b>water</b> your plant?
+            </span>
+
+            <select name="water" id="water" class="search__filter--selectinput">
+              <option value="" selected disabled hidden>Select...</option>
+              <option value="regularly">Regularly</option>
+              <option value="daily">Daily</option>
+              <option value="rarely">Rarely</option>
+            </select>
+          </div>
+
+          <div class="search__filter">
+            <img
+              src="images/illustrations/dog.png"
+              alt="Icon of a normal dog brown with a large ear"
+              class="search__filter--dogicon"
+            />
+
+            <span class="search__filter--text">
+              <b>3.</b> Do you have pets? Do they <b>chew</b> plants?
+            </span>
+
+            <select name="pets" id="pets" class="search__filter--selectinput">
+              <option value="" selected disabled hidden>Select...</option>
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section id="results">
+        <div id="no-results" class="results__container">
+          <div class="results__notfound">
+            <h1 class="results__notfound--title">No Results Yet...</h1>
+            <p class="results__notfound--paragraph">
+              Use the filters above to find the plant that best fits your
+              environment :)
+            </p>
+          </div>
+          <div class="results--image">
+            <img src="images/illustrations/no-results.png" alt="" class="" />
+          </div>
+        </div>
+        <div id="with-results" class="results__container results__found hidden">
+          <img src="images/illustrations/pick.png" width="158px" alt="" />
+          <h1 class="results__found--title">Our picks for you</h1>
+          <div id="results__list"></div>
+          <div class="results__footer">
+            <a href="#search" class="results--button">
+              <img
+                src="images/icons/arrow-up.svg"
+                alt="An arrow points to top"
+              />
+              <span class="results__found--span">back to the top</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </article>
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>
