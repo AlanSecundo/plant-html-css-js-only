@@ -434,17 +434,17 @@ select.search__filter--selectinput option:hover {
     padding: 0px 27px;
   }
 
-  .card {
+  .cardSize {
     width: 258px;
   }
 
   .card__normal {
-    @extend .card;
+    @extend .cardSize;
     padding: 31px 31px 21px 21px;
   }
 
   .card__spotlight {
-    @extend .card;
+    @extend .cardSize;
     padding: 31px 31px 21px 21px;
     justify-content: flex-end;
   }
